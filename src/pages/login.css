@@ -1,0 +1,149 @@
+/* Center the form on the page */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Style the container of the form */
+.login-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Style the form elements */
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.login-container input[type="text"],
+.update-password-container input[type="text"],
+.update-password-container input[type="password"],
+.login-container input[type="password"],
+.login-container input[type="email"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Focus styling for input fields */
+.login-container input[type="text"]:focus,
+.update-password-container input[type="text"]:focus,
+.update-password-container input[type="password"]:focus,
+.login-container input[type="password"]:focus,
+.login-container input[type="email"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styles */
+.login-container button[type="submit"],
+.updatepwd,
+.change-password-link {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgb(88, 56, 250);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem; /* Space between buttons and other elements */
+}
+
+.login-container button[type="submit"]:hover,
+.updatepwd:hover,
+.change-password-link:hover {
+  background-color: rgb(130, 106, 251);
+}
+
+/* Specific styles for the change password link */
+.change-password-link {
+  background-color: rgb(171, 55, 182);
+  color: white;
+  font-size: 16px;
+}
+
+.change-password-link:hover {
+  background-color: rgb(151, 35, 162);
+  color: #f1f1f1;
+}
+
+p.error {
+  color: red;
+}
+
+.password-container, .update-password-container {
+  position: relative;
+  margin-bottom: 1.5rem; /* Consistent margin with other inputs */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+/* Styles for the modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the modal content */
+.modal {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Styles for close button */
+.modal-close {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background-color: #ff4d4d;
+}

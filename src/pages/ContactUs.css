@@ -1,0 +1,99 @@
+/* ContactUs.css */
+
+/* Container for the contact page */
+.contact-container {
+  max-width: 1200px; /* Adjusted for a more centered look */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f4f8; /* Slightly lighter background */
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+}
+
+/* Main heading style */
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50; /* Darker color for better contrast */
+  text-align: center;
+  margin-bottom: 40px; /* More space below the heading */
+}
+
+/* Container for contact items */
+.contact-items {
+  display: flex;
+  justify-content: space-between; /* Evenly space items */
+  flex-wrap: wrap;
+  gap: 20px; /* Adds spacing between items */
+}
+
+/* Style for each contact item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1; /* Allows items to grow and fill available space */
+  min-width: 280px; /* Minimum width to ensure readability */
+  max-width: 400px; /* Max width for larger screens */
+}
+
+/* Style for images */
+.contact-item img {
+  width: 80px; /* Smaller size for images */
+  height: 80px;
+  margin-right: 20px; /* More space between image and text */
+  border-radius: 50%; /* Rounded images */
+  object-fit: cover; /* Ensures image fits nicely */
+}
+
+/* Style for contact information */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 1.5em; /* Adjusted font size */
+  color: #34495e; /* Slightly lighter dark color */
+  margin-bottom: 10px;
+}
+
+.contact-info h3 {
+  font-size: 1.2em;
+  color: #7f8c8d; /* Lighter color for subheadings */
+  margin: 5px 0; /* Margin for spacing */
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #7f8c8d; /* Lighter text color */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .contact-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Adjusted gap for smaller screens */
+  }
+
+  .contact-item {
+    max-width: 90%; /* Full width for smaller screens */
+  }
+
+  .contact-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.3em;
+  }
+
+  .contact-info p {
+    font-size: 1em;
+  }
+}

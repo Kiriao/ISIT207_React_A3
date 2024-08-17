@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+  }
+
+.adoption-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f0f4f8;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .adoption-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .animal-details {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .animal-image {
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: rgb(88, 56, 250);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background-color: rgb(130, 106, 251);
+  }
+  

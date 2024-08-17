@@ -1,0 +1,94 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; /* Adjust padding as needed */
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #fff; /* Example text color */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.menu-icon {
+  font-size: 24px;
+}
+
+/* Navbar Menu Styles */
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end; /* Right align items */
+}
+
+.navbar-menu li {
+  margin: 0 10px;
+  position: relative; /* For positioning the hover effect */
+}
+
+/* Menu links */
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px; /* Add padding for better click area */
+  border-radius: 4px; /* Rounded corners */
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.navbar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  color: #ffeb3b; /* Highlight color on hover */
+  transform: scale(1.05); /* Slightly enlarge the item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Active or current item style (if needed) */
+.navbar-menu a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffeb3b;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show hamburger menu on small screens */
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
