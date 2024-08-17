@@ -3,33 +3,37 @@
 .navbar {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center items horizontally */
   padding: 1rem; /* Adjust padding as needed */
-  background-color: #333;
+  background-color: #333; /* Dark background color */
   color: #fff;
 }
 
 .navbar-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Stack logo and menu toggle vertically */
+  align-items: center; /* Center align items horizontally */
+  margin-bottom: 1rem; /* Space between logo and menu */
 }
 
-.navbar h2 {
-  margin: 0;
-  color: #fff; /* Example text color */
+.logo {
+  height: 60px; /* Adjust for better visibility */
+  width: auto;  /* Maintain aspect ratio */
+  margin-bottom: 0.5rem; /* Space between logo and menu toggle */
 }
 
+/* Menu toggle button */
 .menu-toggle {
   background: none;
   border: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 28px; /* Larger icon for better visibility */
   cursor: pointer;
   display: none; /* Hidden by default */
 }
 
 .menu-icon {
-  font-size: 24px;
+  font-size: 28px; /* Match the size of the menu toggle button */
 }
 
 /* Navbar Menu Styles */
@@ -38,33 +42,36 @@
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: flex-end; /* Right align items */
+  flex-direction: row; /* Display links in a row */
+  justify-content: center; /* Center align items horizontally */
+  width: 100%;
 }
 
+/* Individual menu items */
 .navbar-menu li {
-  margin: 0 10px;
-  position: relative; /* For positioning the hover effect */
+  margin: 0 15px; /* Space between items */
 }
 
 /* Menu links */
 .navbar-menu a {
-  color: #fff;
+  color: #fff; /* Light color for contrast */
   text-decoration: none;
-  padding: 10px 15px; /* Add padding for better click area */
+  padding: 12px 20px; /* Padding for clickable area */
   border-radius: 4px; /* Rounded corners */
   display: inline-block;
+  font-size: 18px; /* Font size to match the logo height */
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-/* Hover effect */
+/* Hover effect for menu links */
 .navbar-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
   color: #ffeb3b; /* Highlight color on hover */
   transform: scale(1.05); /* Slightly enlarge the item */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
 
-/* Active or current item style (if needed) */
+/* Active or current item style */
 .navbar-menu a.active {
   background-color: rgba(255, 255, 255, 0.3);
   color: #ffeb3b;

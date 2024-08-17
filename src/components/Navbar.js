@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import logoimg from '../image/logo.png';
 
 const Navbar = ({ isLoggedIn, onLogout }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -10,7 +11,9 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
   return (
     <nav className="navbar">
       <div className="navbar-header">
-        <h2>Pet Heaven Society</h2>
+        <Link to="/">
+          <img src={logoimg} alt="Pet Heaven Society Logo" className="logo" />
+        </Link>
         <button className="menu-toggle" onClick={toggleMenu}>
           <span className="menu-icon">&#9776;</span>
         </button>
@@ -26,7 +29,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
         <li><Link to="/feedback">Feedback</Link></li>
         {!isLoggedIn && <li><Link to="/login">Login</Link></li>}
         {!isLoggedIn && <li><Link to="/signup">Sign Up</Link></li>}
-        {isLoggedIn && ( <li> <Link to="/" onClick={onLogout} className="logout-link">Logout</Link> </li> )}
+        {isLoggedIn && (<li><Link to="/" onClick={onLogout} className="logout-link">Logout</Link></li>)}
       </ul>
     </nav>
   );
