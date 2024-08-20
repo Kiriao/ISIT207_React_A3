@@ -28,7 +28,7 @@ const App = () => {
   };
 
   return (
-    <Router exact path="/" component={Home}>
+    <Router>
       <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
       <div className="container">
         <Routes>
@@ -46,8 +46,10 @@ const App = () => {
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
+        <Home></Home>
       </div>
     </Router>
+    
   );
 };
 
