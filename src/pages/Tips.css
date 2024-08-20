@@ -1,0 +1,29 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content-wrap {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .tip {
+    font-size: 1.5rem;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  

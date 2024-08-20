@@ -30,6 +30,15 @@ const Footer = () => {
             </a>
           </li>
         </ul>
+        <ul className="footer-links">
+          <li>
+          <a className='link' href="./aboutus" rel="noopener noreferrer"> About Us </a>
+          </li>
+          <li>
+          <a className='link' href="./tips" rel="noopener noreferrer"> Tips </a>
+          </li>
+
+        </ul>
       </div>
     </footer>
   );

@@ -13,6 +13,7 @@ import Confirmation from './pages/Confirmation';
 import ConfirmationRelease from './pages/ConfirmationRelease';
 import ContactUs from './pages/ContactUs';
 import Feedback from './pages/Feedback';
+import Tips from './pages/Tips';
 
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/tips" element={<Tips />} />
           <Route path="/adoption" element={<Adoption onLogin={handleLogin} />} />
           <Route path="/pet_release_form" element={<PetReleaseForm onLogin={handleLogin} />} />
           <Route path="/cat" element={<Cats />} />

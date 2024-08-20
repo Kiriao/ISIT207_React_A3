@@ -16,14 +16,7 @@ const Home = () => {
           <h1>Welcome, {username || 'Guest'} to the Pet Heaven Society!</h1>
         </div>
         <div className="video-container">
-          <video
-            src="https://www.shutterstock.com/shutterstock/videos/3410866093/preview/stock-footage-homeless-stray-dogs-in-cage-at-animal-shelter-abandoned-animals.webm"
-            controls
-            autoPlay
-            loop
-            muted
-            className="main-video"
-          />
+
         </div>
       </div>
       <Footer />
