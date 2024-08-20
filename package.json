@@ -2,7 +2,7 @@
   "homepage": "https://Kiriao.github.io/ISIT207_React_A3",
   "name": "assignment-3-react-app",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",

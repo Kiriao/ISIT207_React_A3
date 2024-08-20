@@ -28,7 +28,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router exact path="/" component={Home}>
       <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
       <div className="container">
         <Routes>
