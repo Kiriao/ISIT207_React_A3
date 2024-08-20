@@ -46,7 +46,6 @@ const App = () => {
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
-        <Home></Home>
       </div>
     </Router>
     
