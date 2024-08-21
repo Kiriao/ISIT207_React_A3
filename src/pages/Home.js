@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 import Slider from 'react-slick';
-import './App.css';
-import './pages/Home.css';
+import '../App.css';
+import './Home.css';
 
 const Home = () => {
   const location = useLocation();
