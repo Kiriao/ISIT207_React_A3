@@ -1,7 +1,7 @@
-// Home.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import Home from './Home';
 import AboutUs from './AboutUs';
 import Login from './Login';
 import SignUp from './SignUp';
@@ -10,10 +10,12 @@ import Dogs from './Dog';
 import Adoption from './Adoption';
 import PetReleaseForm from './PetReleaseForm';
 import Confirmation from './Confirmation';
-import ConfirmationRelease from './ConfirmationRelease';
+import ConfirmationRelease from '/ConfirmationRelease';
 import ContactUs from './ContactUs';
 import Feedback from './Feedback';
 import Tips from './Tips';
+import App from '../App';
+
 
 const Home = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,7 +33,7 @@ const Home = () => {
       <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
       <div className="container">
         <Routes>
-          <Route path="/" element={<div>Welcome to Home!</div>} />
+          <Route path="/" element={<App />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/adoption" element={<Adoption onLogin={handleLogin} />} />
