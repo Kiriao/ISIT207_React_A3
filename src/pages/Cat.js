@@ -18,7 +18,13 @@ const Cats = () => {
   };
 
   const render = (data) => {
-    if (data.loading === true) return <p>Loading...</p>;
+    if (data.loading === true) {
+      return (
+        <div className='loading-overlay'>
+          <div className='spinner'></div>
+        </div>
+      );
+    }
 
     console.log('Got the data', data);
 
