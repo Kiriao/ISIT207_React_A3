@@ -1,9 +1,9 @@
 // Home.js
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Footer from '../components/Footer';
 import './App.css';
 import './pages/Home.css';
+import Footer from './components/Footer';
 
 const App = () => {
   const location = useLocation();
