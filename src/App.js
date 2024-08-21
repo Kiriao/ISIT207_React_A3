@@ -1,26 +1,53 @@
-// Home.js
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import './App.css';
-import './pages/Home.css';
-import Footer from './components/Footer';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './Home';
+import AboutUs from './pages/AboutUs';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import Cats from './pages/Cat';
+import Dogs from './pages/Dog';
+import Adoption from './pages/Adoption';
+import PetReleaseForm from './pages/PetReleaseForm';
+import Confirmation from './pages/Confirmation';
+import ConfirmationRelease from './pages/ConfirmationRelease';
+import ContactUs from './pages/ContactUs';
+import Feedback from './pages/Feedback';
+import Tips from './pages/Tips';
+
 
 const App = () => {
-  const location = useLocation();
-  const { username } = location.state || {};
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
 
   return (
-    <div className="home-container">
-      <div className="content-wrap">
-        <div className="welcome-container">
-          <h1>Welcome, {username || 'Guest'} to the Pet Heaven Society!</h1>
-        </div>
-        <div className="video-container">
-
-        </div>
+    <Router>
+      <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
+      <div className="container">
+        <Routes>
+          <Route exact path="/" component={Home} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/tips" element={<Tips />} />
+          <Route path="/adoption" element={<Adoption onLogin={handleLogin} />} />
+          <Route path="/pet_release_form" element={<PetReleaseForm onLogin={handleLogin} />} />
+          <Route path="/cat" element={<Cats />} />
+          <Route path="/dog" element={<Dogs />} />
+          <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/confirmationrelease" element={<ConfirmationRelease />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/feedback" element={<Feedback />} />
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 };
 
