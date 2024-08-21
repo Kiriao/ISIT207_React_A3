@@ -15,7 +15,6 @@ import ContactUs from './pages/ContactUs';
 import Feedback from './pages/Feedback';
 import Tips from './pages/Tips';
 
-
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -32,7 +31,7 @@ const App = () => {
       <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
       <div className="container">
         <Routes>
-          <Route exact path="/" component={Home} />
+          <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/adoption" element={<Adoption onLogin={handleLogin} />} />
