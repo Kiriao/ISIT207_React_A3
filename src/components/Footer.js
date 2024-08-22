@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faXTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css'; 
@@ -31,12 +32,8 @@ const Footer = () => {
           </li>
         </ul>
         <ul className="footer-links">
-          <li>
-          <a className='link' href="./aboutus" rel="noopener noreferrer"> About Us </a>
-          </li>
-          <li>
-          <a className='link' href="./tips" rel="noopener noreferrer"> Tips </a>
-          </li>
+          <li><Link to="/tips">Tips</Link></li>
+          <li><Link to="/aboutus">About Us</Link></li>
 
         </ul>
       </div>

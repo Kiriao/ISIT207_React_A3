@@ -93,7 +93,7 @@ const Login = ({ onLogin }) => {
               className="change-password-link"
               onClick={() => setShowChangePassword(true)}
             >
-              Change Password
+              Forgot Password
             </button>
             <Modal
               isOpen={showChangePassword}
@@ -102,7 +102,7 @@ const Login = ({ onLogin }) => {
               className="modal"
               overlayClassName="modal-overlay"
             >
-              <h2>Change Password</h2>
+              <h2>Forgot Password</h2>
               <form onSubmit={handleChangePassword}>
                 <div className="update-password-container">
                   <label>New Password:</label>

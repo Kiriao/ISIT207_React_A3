@@ -22,6 +22,7 @@ const Confirmation = () => {
         <div className="confirmation-details">
           <h2>Congratulations on adopting {selectedAnimal.name}!</h2>
           <img src={selectedAnimal.url} alt={selectedAnimal.name} className="animal-image" />
+          <h2>{selectedAnimal.description}!</h2>
           <button onClick={handleBackClick} className="back-button">Back to Adoption</button>
         </div>
       ) : (

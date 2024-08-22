@@ -29,7 +29,8 @@
   }
   
   textarea.form-control {
-    resize: vertical;
+    resize: none;
+    width: 99%;
   }
   
   .submit-button {

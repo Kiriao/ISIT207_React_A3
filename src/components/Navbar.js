@@ -26,7 +26,7 @@ const Navbar = ({ isLoggedIn, onLogout }) => {
         <li><Link to="/cat">Cats</Link></li>
         <li><Link to="/dog">Dogs</Link></li>
         <li><Link to="/contactus">Contact Us</Link></li>
-        <li><Link to="/feedback">Feedback</Link></li>
+        {isLoggedIn && (<li><Link to="/feedback">Feedback</Link></li>)}
         {!isLoggedIn && <li><Link to="/login">Login</Link></li>}
         {!isLoggedIn && <li><Link to="/signup">Sign Up</Link></li>}
         {isLoggedIn && (<li><Link to="/" onClick={onLogout} className="logout-link">Logout</Link></li>)}
